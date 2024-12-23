@@ -1,0 +1,19 @@
+id: com.itgmania.ITGmania.ClubFantastic
+branch: '2.0'
+runtime: com.itgmania.ITGmania
+runtime-version: '24.08'
+sdk: org.freedesktop.Sdk
+build-extension: true
+separate-locales: false
+modules:
+  - name: ClubFantastic
+    buildsystem: simple
+    build-commands:
+      - mv "Club Fantastic*" /app/itgmania/Songs/
+    sources: 
+      - type: archive
+        url: https://download.clubfantastic.dance/club_fantastic_season2_songs_9ms.zip
+        sha256: 845b62da6bb2994fc2ba7871b35da02f6eb36ea1ae78c2b9a59a6ec046946787
+      - type: file
+        path: com.itgmania.ITGmania.appdata.xml
+

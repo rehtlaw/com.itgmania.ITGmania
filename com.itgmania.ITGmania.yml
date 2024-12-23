@@ -1,0 +1,41 @@
+id: com.itgmania.ITGmania
+runtime: org.freedesktop.Platform
+runtime-version: '24.08'
+sdk: org.freedesktop.Sdk
+command: itgmania
+finish-args:
+  - --device=all
+  - --share=ipc
+  - --share=network
+  - --socket=pulseaudio
+  - --socket=x11
+  - --metadata=X-DConf=migrate-path=/com/itgmania/ITGmania
+  - --persist=.itgmania
+add-extensions:
+  com.itgmania.ITGmania.ClubFantastic:
+    version: '2.0'
+    directory: itgmania/Songs
+    subdirectories: true
+    no-autodownload: false
+    autodelete: true
+modules:
+  - shared-modules/glu/glu-9.json
+  - shared-modules/glew/glew.json
+  - name: itgmania
+    buildsystem: cmake
+    config-opts: 
+      - -DWITH_FFMPEG:BOOL=ON
+      - -DWITH_FULL_RELEASE:BOOL=ON
+    post-install:
+      - mkdir -p /app/bin/
+      - ln -s /app/itgmania/itgmania /app/bin/itgmania
+      - install -m644 -p -D _assets/logo.svg /app/share/icons/hicolor/scalable/apps/${FLATPAK_ID}.svg
+      - install -m644 -p -D itgmania.desktop /app/share/applications/${FLATPAK_ID}.desktop
+      - install -m644 -p -D com.itgmania.ITGmania.appdata.xml /app/share/appdata/${FLATPAK_ID}.appdata.xml
+      - desktop-file-edit --set-icon=${FLATPAK_ID} /app/share/applications/${FLATPAK_ID}.desktop
+    sources: 
+      - type: git
+        url: https://github.com/rehtlaw/itgmania.git
+        branch: beta
+      - type: file
+        path: com.itgmania.ITGmania.appdata.xml

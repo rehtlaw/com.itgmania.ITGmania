@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>com.itgmania.ITGmania</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>GPLv3</project_license>
+  <name>ITGmania</name>
+  <summary>Rhythm and dance game</summary>
+  <launchable type="desktop-id">com.itgmania.ITGmania.desktop</launchable>
+  <developer_name>Chris Danford, the StepMania development team, et al.</developer_name>
+
+  <description>
+    <p>ITGmania is a fork of StepMania 5.1, improved for the post-ITG community! It features 3D graphics, keyboard and "dance pad" support, and an editor for creating your own steps.</p>
+  </description>
+
+  <screenshots>
+    <screenshot type="default">
+      <image width="1280" height="720">https://i.imgur.com/5nlHcWV.png</image>
+    </screenshot>
+    <screenshot>
+      <image width="1280" height="720">https://i.imgur.com/zQTr5ww.jpg</image>
+    </screenshot>
+  </screenshots>
+
+  <url type="homepage">https://www.itgmania.com/</url>
+  <url type="bugtracker">https://github.com/itgmania/itgmania/issues</url>
+
+  <update_contact>kekun.plazas_at_laposte.net</update_contact>
+
+  <releases>
+    <release version="0.10" date="2025-01-01"/>
+  </releases>
+
+  <content_rating type="oars-1.1" />
+</component>
