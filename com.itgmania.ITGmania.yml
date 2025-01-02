@@ -26,11 +26,12 @@ modules:
     config-opts: 
       - -DWITH_FFMPEG:BOOL=ON
       - -DWITH_FULL_RELEASE:BOOL=ON
+      - -DIS_FLATPAK:BOOL=ON
     post-install:
       - mkdir -p /app/bin/
       - ln -s /app/itgmania/itgmania /app/bin/itgmania
       - install -m644 -p -D _assets/logo.svg /app/share/icons/hicolor/scalable/apps/${FLATPAK_ID}.svg
-      - install -m644 -p -D itgmania.desktop /app/share/applications/${FLATPAK_ID}.desktop
+      - install -m644 -p -D itgmania-flatpak.desktop /app/share/applications/${FLATPAK_ID}.desktop
       - install -m644 -p -D com.itgmania.ITGmania.appdata.xml /app/share/appdata/${FLATPAK_ID}.appdata.xml
       - desktop-file-edit --set-icon=${FLATPAK_ID} /app/share/applications/${FLATPAK_ID}.desktop
     sources: 
