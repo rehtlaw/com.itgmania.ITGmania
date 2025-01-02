@@ -40,3 +40,5 @@ modules:
         branch: beta
       - type: file
         path: com.itgmania.ITGmania.appdata.xml
+      - type: file
+        path: itgmania-flatpak.desktop
