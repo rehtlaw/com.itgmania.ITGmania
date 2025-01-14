@@ -1,4 +1,5 @@
 id: com.itgmania.ITGmania
+branch: 'stable'
 runtime: org.freedesktop.Platform
 runtime-version: '24.08'
 sdk: org.freedesktop.Sdk
@@ -9,13 +10,14 @@ finish-args:
   - --share=network
   - --socket=pulseaudio
   - --socket=x11
+  - --filesystem=~/.itgmania:create
   - --metadata=X-DConf=migrate-path=/com/itgmania/ITGmania
   - --persist=.itgmania
 add-extensions:
   com.itgmania.ITGmania.ClubFantastic:
     version: '2.0'
     directory: itgmania/Songs
-    subdirectories: true
+    subdirectories: false
     no-autodownload: false
     autodelete: true
 modules:
@@ -36,8 +38,9 @@ modules:
       - desktop-file-edit --set-icon=${FLATPAK_ID} /app/share/applications/${FLATPAK_ID}.desktop
     sources: 
       - type: git
-        url: https://github.com/rehtlaw/itgmania.git
-        branch: beta
+        url: https://github.com/itgmania/itgmania.git
+        # update this to the release commit
+        commit: 2fb879d15031bf55caa68f2d5660bdb33b37b925
       - type: file
         path: com.itgmania.ITGmania.appdata.xml
       - type: file
