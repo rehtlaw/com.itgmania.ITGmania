@@ -17,6 +17,7 @@ finish-args:
   - --persist=.itgmania
 add-extensions:
   com.itgmania.ITGmania.ClubFantastic:
+    # if CF ever gets a new release, create a new extension version that ships all 3 packs 
     version: '2.0'
     directory: itgmania/Songs
     subdirectories: false
@@ -29,7 +30,6 @@ modules:
     buildsystem: cmake
     config-opts: 
       - -DWITH_FULL_RELEASE:BOOL=ON
-      - -DIS_FLATPAK:BOOL=ON
     post-install:
       - mkdir -p /app/bin/
       - ln -s /app/itgmania/itgmania /app/bin/itgmania
@@ -40,8 +40,7 @@ modules:
     sources: 
       - type: git
         url: https://github.com/itgmania/itgmania.git
-        # update this to the release commit
-        commit: 2fb879d15031bf55caa68f2d5660bdb33b37b925
+        commit: 30a03e0ab9200945f810e1c1ae46b402a6c0119f
       - type: file
         path: com.itgmania.ITGmania.appdata.xml
       - type: file
