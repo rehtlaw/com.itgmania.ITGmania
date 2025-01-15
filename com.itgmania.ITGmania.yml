@@ -11,6 +11,8 @@ finish-args:
   - --socket=pulseaudio
   - --socket=x11
   - --filesystem=~/.itgmania:create
+  # this is needed for the crash report, because for some reason that still goes to /tmp
+  - --filesystem=/tmp:create
   - --metadata=X-DConf=migrate-path=/com/itgmania/ITGmania
   - --persist=.itgmania
 add-extensions:
@@ -26,7 +28,6 @@ modules:
   - name: itgmania
     buildsystem: cmake
     config-opts: 
-      - -DWITH_FFMPEG:BOOL=ON
       - -DWITH_FULL_RELEASE:BOOL=ON
       - -DIS_FLATPAK:BOOL=ON
     post-install:
