@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>com.itgmania.ITGmania</id>
+  
+  <name>ITGmania</name>
+  <summary>Rhythm and dance game</summary>
+  
+  <metadata_license>CC-BY-SA-4.0</metadata_license>
+  <project_license>GPL-3.0-or-later</project_license>
+  
+  <icon type="remote">https://raw.githubusercontent.com/itgmania/itgmania/0346d77307c65da8f043ba85547f7d3752131668/_assets/logo.svg</icon>
+  <icon type="local">/app/share/icons/hicolor/scalable/apps/com.itgmania.ITGmania.svg</icon>
+  <supports>
+    <control>pointing</control>
+    <control>keyboard</control>
+    <control>gamepad</control>
+  </supports>
+  <categories>
+    <category>Game</category>
+    <category>ArcadeGame</category>
+  </categories>
+  <keywords>
+    <keyword>rhythm game</keyword>
+    <keyword>dance game</keyword>
+    <keyword>itg</keyword>
+    <keyword>stepmania</keyword>
+    <keyword>ddr</keyword>
+  </keywords>
+
+  <releases>
+    <release version="1.0.0" date="2025-03-15">
+      <descriptio/>
+    </release>
+  </releases>
+
+  <url type="homepage">https://itgmania.com</url>
+  <url type="bugtracker">https://github.com/itgmania/itgmania/issues</url>
+  
+  <description>
+    <p>
+      ITGmania is a fork of StepMania 5.1, improved for the post-ITG community! It features 3D graphics, keyboard and &quot;dance pad&quot; support, and an editor for creating your own steps.
+    </p>
+  </description>
+  
+  <launchable type="desktop-id">itgmania-flatpak.desktop</launchable>
+  <screenshots>
+    <screenshot type="default">
+      <image>https://github.com/rehtlaw/com.itgmania.ITGmania/blob/main/itg-1.png?raw=true</image>
+    </screenshot>
+    <screenshot>
+      <image>https://github.com/rehtlaw/com.itgmania.ITGmania/blob/main/itg-2.png?raw=true</image>
+    </screenshot>
+    <screenshot>
+      <image>https://github.com/rehtlaw/com.itgmania.ITGmania/blob/main/itg-3.png?raw=true</image>
+    </screenshot>
+    <screenshot>
+      <image>https://github.com/rehtlaw/com.itgmania.ITGmania/blob/main/itg-4.png?raw=true</image>
+    </screenshot>
+  </screenshots>
+  <content_rating type="oars-1.1"/>
+</component>

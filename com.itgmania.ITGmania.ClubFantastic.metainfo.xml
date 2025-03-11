@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="addon">
+  <id>com.itgmania.ITGmania.ClubFantastic</id>
+  
+  <name>Club Fantastic</name>
+  <summary>Default Song Packs for ITGmania</summary>
+  
+  <metadata_license>CC0-1.0</metadata_license>
+  
+  <extends>
+    <id>com.itgmania.ITGmania</id>
+  </extends>
+  
+  <description>
+    <p>
+      Default Song Packs for ITGmania
+    </p>
+    <p>
+      Comes with 2 packs or royalty-free Songs for ITGmania
+    </p>
+  </description>
+
+  <url type="homepage">https://www.clubfantastic.com</url>
+  <releases>
+    <release version="2.0.1" date="2021-08-06"/>
+  </releases>
+</component>

@@ -1,5 +1,5 @@
 id: com.itgmania.ITGmania.ClubFantastic
-branch: '2.0'
+branch: '2.0.1'
 runtime: com.itgmania.ITGmania
 runtime-version: 'stable'
 sdk: org.freedesktop.Sdk//24.08
@@ -17,5 +17,4 @@ modules:
         sha256: 845b62da6bb2994fc2ba7871b35da02f6eb36ea1ae78c2b9a59a6ec046946787
         strip-components: 0
       - type: file
-        path: com.itgmania.ITGmania.ClubFantastic.appdata.xml
-
+        path: com.itgmania.ITGmania.ClubFantastic.metainfo.xml

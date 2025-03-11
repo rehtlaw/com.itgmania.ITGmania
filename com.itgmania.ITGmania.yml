@@ -18,7 +18,7 @@ finish-args:
 add-extensions:
   com.itgmania.ITGmania.ClubFantastic:
     # if CF ever gets a new release, create a new extension version that ships all 3 packs 
-    version: '2.0'
+    version: '2.0.1'
     directory: itgmania/Songs
     subdirectories: false
     no-autodownload: false
@@ -35,13 +35,13 @@ modules:
       - ln -s /app/itgmania/itgmania /app/bin/itgmania
       - install -m644 -p -D _assets/logo.svg /app/share/icons/hicolor/scalable/apps/${FLATPAK_ID}.svg
       - install -m644 -p -D itgmania-flatpak.desktop /app/share/applications/${FLATPAK_ID}.desktop
-      - install -m644 -p -D com.itgmania.ITGmania.appdata.xml /app/share/appdata/${FLATPAK_ID}.appdata.xml
+      - install -m644 -p -D com.itgmania.ITGmania.metainfo.xml /app/share/appdata/${FLATPAK_ID}.metainfo.xml
       - desktop-file-edit --set-icon=${FLATPAK_ID} /app/share/applications/${FLATPAK_ID}.desktop
     sources: 
       - type: git
         url: https://github.com/itgmania/itgmania.git
-        commit: 30a03e0ab9200945f810e1c1ae46b402a6c0119f
+        commit: 0346d77307c65da8f043ba85547f7d3752131668
       - type: file
-        path: com.itgmania.ITGmania.appdata.xml
+        path: com.itgmania.ITGmania.metainfo.xml
       - type: file
         path: itgmania-flatpak.desktop
