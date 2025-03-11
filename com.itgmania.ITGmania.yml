@@ -27,7 +27,12 @@ modules:
   - name: itgmania
     buildsystem: cmake
     config-opts: 
-      - -DWITH_FULL_RELEASE:BOOL=ON
+      arch:
+        aarch64:
+          - -DWITH_MINIMAID=OFF
+          - -DWITH_FULL_RELEASE:BOOL=ON
+        x86_64:
+          - -DWITH_FULL_RELEASE:BOOL=ON
     post-install:
       - mkdir -p /app/bin/
       - ln -s /app/itgmania/itgmania /app/bin/itgmania
