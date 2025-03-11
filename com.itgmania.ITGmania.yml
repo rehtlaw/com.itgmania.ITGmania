@@ -26,12 +26,13 @@ modules:
   - shared-modules/glew/glew.json
   - name: itgmania
     buildsystem: cmake
-    config-opts: 
-      - -DWITH_FULL_RELEASE:BOOL=ON
-    arch:
-      aarch64:
-        config-opts:
-          - -DWITH_MINIMAID:BOOL=OFF
+    build-options:
+      config-opts:
+        - -DWITH_FULL_RELEASE:BOOL=ON
+      arch:
+        aarch64:
+          config-opts:
+            - -DWITH_MINIMAID:BOOL=OFF
     post-install:
       - mkdir -p /app/bin/
       - ln -s /app/itgmania/itgmania /app/bin/itgmania
