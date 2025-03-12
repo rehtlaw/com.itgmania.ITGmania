@@ -43,7 +43,7 @@ modules:
     sources: 
       - type: git
         url: https://github.com/itgmania/itgmania.git
-        commit: 0346d77307c65da8f043ba85547f7d3752131668
+        tag: v1.0.0
       - type: file
         path: com.itgmania.ITGmania.metainfo.xml
       - type: file
